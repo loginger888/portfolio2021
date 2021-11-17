@@ -1,0 +1,690 @@
+@charset "UTF-8";
+
+/*Base on Eric Meyer Css Reset  */
+/**
+ * Initialization all html tag default value
+ */
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Initialization tag
+   ========================================================================== */
+/**
+ * HTML5 display-role reset for older browsers
+ */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * setting page default font siez
+ * font-size: 62.5%; -->  10 ÷ 16 × 100% = 62.5%
+ */
+html {
+  font-size: 62.5%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-size: 15px;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, 'LiHei', "Microsoft JhengHei", "PMingLiU", "微軟正黑體", "新細明體", sans-serif;
+  color: #555;
+  line-height: 1.4;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  height: 0;
+}
+
+/* Embedded content
+   ========================================================================== */
+img, embed, object {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+input, select {
+  vertical-align: middle;
+}
+
+input, button, textarea, select, optgroup, option {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+button, input, optgroup, select, textarea {
+  margin: 0;
+}
+
+input[type="submit"], input[type="radio"], input[type="checkbox"], input[type="button"], input[type="reset"] {
+  cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  padding: 0;
+}
+
+button, select {
+  cursor: pointer;
+}
+
+/* Links
+   ========================================================================== */
+a {
+  text-decoration: none;
+  background-color: transparent;
+}
+a:active, a:hover {
+  outline: 0;
+}
+
+/* lists
+   ========================================================================== */
+/**
+ * clear ol, ul list style
+ */
+ul, ol {
+  list-style: none;
+}
+
+/* box-sizing
+   ========================================================================== */
+/**
+ * clear all box-sizing setting
+ */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 990px) {
+  .container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* Button core
+   ========================================================================== */
+.btn {
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+/* Button Style 
+   below border color background padding etc can custom
+   ========================================================================== */
+.btn {
+  border: 1px solid;
+  border-color: transparent;
+  padding: 10px 20px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  font-size: 16px;
+  font-size: 1.6rem;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn--primary{
+  color: #555;
+  border: 1px solid #8ecae4;
+}
+.btn--primary:hover, .btn--primary:focus {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  color: #888;
+}
+.btn--2{
+  color: #FF0000;
+  border: 1px solid #FF0000;
+}
+.btn--3{
+  color: #555;
+  border: 1px solid #FFFF00;
+}
+.btn--4{
+  border: 1px solid #66FFEC;
+}
+.btn--5{
+  color: #0040ff;
+  border: 1px solid #0040ff;
+}
+.btn--6{
+  color: #7c66ff;
+  border: 1px solid #7c66ff;
+}
+
+
+/**
+ * etmall site glonall css setting
+ */
+.l-left {
+  float: left;
+}
+
+.l-right {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.context-block {
+  display: block;
+  overflow: hidden;
+}
+
+.section {
+  *zoom: 1;
+  padding: 15% 5%;
+}
+@media (min-width: 990px) {
+  .section {
+    padding: 3%;
+  }
+}
+.section:after, .section:before {
+  content: "";
+  display: block;
+}
+.section:after {
+  clear: both;
+}
+
+.section:nth-child(odd) {
+  /*background: #eee;*/
+  background: url("https://subtlepatterns.toptal.io/designers/subtlepatterns/wp-content/themes/tweaker7/images/transp_bg.png");
+}
+
+.txt {
+  margin: 8px 0;
+}
+.txt_center{
+  text-align: center;
+}
+
+/* back to top
+   ========================================================================== */
+.n-cd-top {
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  z-index: 3;
+  display: inline-block;
+  color: #fff;
+  letter-spacing: 1px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+  background: rgba(255, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  font-size: 13px;
+  -webkit-transition: opacity .3s 0s, visibility 0s .3s;
+  -moz-transition: opacity .3s 0s, visibility 0s .3s;
+  transition: opacity .3s 0s, visibility 0s .3s;
+}
+
+.n-cd-top.cd-is-visible {
+  -webkit-transition: opacity .3s 0s, visibility 0s 0s;
+  -moz-transition: opacity .3s 0s, visibility 0s 0s;
+  transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.n-cd-top.cd-is-visible {
+  visibility: visible;
+  opacity: .5;
+}
+
+.n-cd-top:hover {
+  color: #fff;
+  opacity: .8;
+}
+
+/**
+ * etmall full site about css setting
+ */
+@media (min-width: 990px) {
+  .about {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+  }
+}
+.about__tit {
+  font-size: 16px;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.about__sub {
+  color: #5781ff;
+  margin-top: 30px;
+}
+.about__skills li {
+  margin-top: 10px;
+}
+.about__skills li span {
+  color: #5781ff;
+}
+.about__skills li:first-child {
+  margin-top: 30px;
+}
+
+.name, .name--en {
+  font-size: 2.5rem;
+}
+
+.name--en {
+  color: #5781ff;
+  font-size: 3em;
+  font-weight: bold;
+}
+@media (min-width: 990px) {
+  .name{
+    font-size: 3em;
+  }
+  .name--en {
+    font-size: 4.5em;
+  }
+}
+
+.me {
+  position: fixed;
+  top: 20%;
+  left: 15%;
+  width: 260px;
+  height: 260px;
+  -moz-border-radius: 130px;
+  -webkit-border-radius: 130px;
+  border-radius: 130px;
+  background: #ff0000;
+  color: #fff;
+  text-align: center;
+  padding-top: 70px;
+  display: none;
+  border: 1px solid #fff;
+}
+@media (min-width: 990px) {
+  .me {
+    display: block;
+  }
+}
+@media (min-width: 1800px) {
+  .me {
+    left: 25%;
+  }
+}
+.me .txt {
+  margin: 10px 0;
+  letter-spacing: 1px;
+}
+.me__pic {
+  width: 262px;
+  height: 262px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: url(../img/me.png);
+  opacity: 1;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.me:hover .me__pic {
+  opacity: 0;
+}
+.me__behace{
+  float: left;
+  margin: 10px 113px;
+}
+
+/**
+ * etmall full site ui css setting
+ */
+@media (min-width: 990px) {
+  .ui {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+   /* width: 50%;
+    float: left;*/
+  }
+}
+.ui__desk img, .ui__phone img {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.ui__desk img:hover, .ui__phone img:hover {
+  opacity: .8;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+.ui__phone img {
+  max-width: 298px;
+}
+@media (min-width: 990px) {
+  .ui--long {
+    margin-top: 15%;
+  }
+}
+.ui__tit {
+  font-size: 16px;
+  font-size: 2.5rem;
+  text-align: center;
+  letter-spacing: 2px;
+}
+.ui__txt{
+  margin: 7% auto;
+  width: 100%;
+  max-width: 640px;
+}
+.ui__btns{
+  text-align: center;
+}
+
+
+.ui-site {
+  *zoom: 1;
+  padding: 5% 5% 3%;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .ui-site {
+    padding: 40px 20%;
+  }
+  .ui__txt{
+  margin: 3% auto;
+  width: 80%;
+  }
+}
+.ui-site:after, .ui-site:before {
+  content: "";
+  display: block;
+}
+.ui-site:after {
+  clear: both;
+}
+.ui-site .img {
+  margin: 2% 0;
+  padding: 2px;
+  border: 1px solid #ededed;
+  display: inline-block;
+  max-width: 1800px;
+}
+.ui-site img:first-child {
+  margin-top: 0;
+}
+.ui-site .btn {
+  margin-top: 20px;
+}
+
+.ui-site:first-child {
+  *zoom: 1;
+  padding-bottom: 0;
+}
+.ui-site:first-child:after, .ui-site:first-child:before {
+  content: "";
+  display: block;
+}
+.ui-site:first-child:after {
+  clear: both;
+}
+
+/* arrow
+   ========================================================================== */
+.arrow {
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  z-index: 3;
+  display: inline-block;
+  color: #fff;
+  line-height: 40px;
+  padding: 0 10px;
+  position: fixed;
+  top: 10%;
+  background: #3300FF;
+  opacity: .8;
+  -webkit-transition: opacity .3s;
+  -moz-transition: opacity .3s;
+  transition: opacity .3s;
+}
+.arrow--next {
+  right: 0;
+}
+.arrow:hover {
+  opacity: 1;
+}
+
+/**
+ * event css setting
+ */
+.intro {
+  width: 300px;  
+  margin: 20px auto 10px;
+  padding: 2% 5% 1%; 
+}
+@media (min-width: 655px) {
+ .intro {
+  width: 600px; 
+  margin: 20px auto 10px;
+  padding: 2% 5% 1%;  
+}
+}
+.sub__title{
+  width: 128px; 
+  margin: 60px auto 10px;
+}
+
+
+.section-event {
+  *zoom: 1;
+  padding: 2% 5% 1%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center
+}
+@media (min-width: 1200px) {
+  .section-event {
+    padding: 30px 15% 0px;
+    justify-content: center
+  }
+}
+.section-event:after, .section-event:before {
+  content: "";
+  display: block;
+}
+.section-event:after {
+  clear: both;
+}
+
+.event {
+  overflow: hidden;
+  padding: 0 1%;
+}
+@media (min-width: 768px) {
+  .event {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 30%;
+  }
+}
+.event__img {
+  border: 1px solid #ededed;
+  max-width: 500px;
+  margin: 5% auto;
+  overflow: hidden;
+}
+.event__img img {
+  width: 100%;
+}
+.event__img img:hover {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  opacity: .8;
+  transform: scale(1.1);
+}
+
+/**
+ * etmall full site header css setting
+ */
+.header {
+  background: #555;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+}
+.header a {
+  font-size: 13px;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 0 6%;
+  position: relative;
+  display: inline-block;
+}
+@media (min-width: 990px) {
+  .header a {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 380px) {
+  .header a {
+    font-size: 15px;
+    font-size: 1.5rem;
+  }
+}
+.header a:hover {
+  opacity: .8;
+}
+/*.header a.active{
+  background: #fff;
+}*/
+/*.header a.active {
+    background: #fff;
+    display: inline-block;
+    color: #555;
+}*/
+
+/**
+ * etmall full site footer css setting
+ */
+.footer {
+  margin: 50px auto 0px;  
+  padding: 0 0 50px 0; 
+  font-size: 1.1rem;
+  background: #555;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+}
+.footer .container{
+
+  padding: 20px;
+  margin: 50px auto ;
+  display: inline-block;
+}
+.info {
+  margin: 10px; 
+  width: 200px;   
+  display: inline-block;
+  align-items: center;
+  vertical-align: middle;
+}
+@media (min-width: 650px){
+  .info {
+  width: 250px;   
+  display: inline-block;
+  align-items: center;
+}
+}
+html{
+  scroll-behavior: smooth;
+}
+
+/*# sourceMappingURL=default.css.map */
